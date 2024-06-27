@@ -50,7 +50,7 @@ Press ctrl+c to exit.
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
-    prompt: '> '
+    prompt: "> "
   });
   
   rl.prompt();
@@ -107,7 +107,7 @@ async function chat (prompt) {
           role: "tool",
           name: functionName,
           content: JSON.stringify(functionResult)
-        })
+        });
       }
     }
   
@@ -126,7 +126,7 @@ async function get_current_weather (args) {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${args.latitude}&longitude=${args.longitude}&current=temperature_2m`
 
   const response = await fetch(url);
-  return response.json()
+  return await response.json();
 }
 
 main();
