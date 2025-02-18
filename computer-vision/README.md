@@ -49,10 +49,10 @@ that it represents a particular class.
 2. **Instance segmentation** → Isolate individual objects in a given image.
 3. **Panoptic segmentation** → Segment by instance and object class.
 
-There are a number of models available for image segmentation on Hugging Face.
-The "segformer" 
+There are a number of models available for image segmentation on Hugging Face,
+found here:
 
-- https://huggingface.co/models?other=segformer
+- https://huggingface.co/models?pipeline_tag=image-segmentation
 
 The code for the image segmentation examples are nearly identical, since the
 selected _model_ determines the type of image segmentation performed as well
@@ -61,3 +61,4 @@ as the _classes_ of objects segmented.
 For example, in the file `03-image-seg-semantic-urban.py`, the provided model
 is a "SegFormer" _semantic segmentation_ model trained on the "CityScapes" dataset.
 
+- https://huggingface.co/models?other=segformer
