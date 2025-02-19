@@ -7,9 +7,9 @@ import requests
 HF_TOKEN = ""
 
 # Request an image from a URL.
-# url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/segmentation_input.jpg"
-# url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kowloon_Waterfront%2C_Hong_Kong%2C_2013-08-09%2C_DD_05.jpg/1024px-Kowloon_Waterfront%2C_Hong_Kong%2C_2013-08-09%2C_DD_05.jpg"
-url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/St_Andrew%27s_Street_-_geograph.org.uk_-_5553498.jpg/1024px-St_Andrew%27s_Street_-_geograph.org.uk_-_5553498.jpg"
+url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/segmentation_input.jpg"
+# url = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Slow_Life_in_A_Tea_House_01_edited.jpg/1024px-Slow_Life_in_A_Tea_House_01_edited.jpg"
+# url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/St_Andrew%27s_Street_-_geograph.org.uk_-_5553498.jpg/1024px-St_Andrew%27s_Street_-_geograph.org.uk_-_5553498.jpg"
 
 image_data = requests.get(url, stream=True)
 image = Image.open(image_data.raw)
